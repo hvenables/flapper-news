@@ -1,8 +1,6 @@
 app.controller('MainCtrl', ['$scope', 'posts', function($scope, posts) {
   var self = this;
 
-  self.test = 'Hello World';
-
   self.posts = posts.posts;
 
   self.addPost = function() {

@@ -9,10 +9,6 @@ describe('MainCtrl', function() {
     ctrl = $controller('MainCtrl', { $scope:scope });
   }));
 
-  it('test has been defined in the controller', function() {
-    expect(ctrl.test).toEqual('Hello World')
-  });
-
   it('starts with an empty list of posts', function() {
     expect(ctrl.posts.length).toEqual(0)
   });
@@ -21,6 +17,12 @@ describe('MainCtrl', function() {
     ctrl.title = "hello";
     ctrl.addPost();
     expect(ctrl.posts[0].title).toEqual("hello")
+  });
+
+  it('cannot add an empyty item to the list', function() {
+    ctrl.title = ''
+    ctrl.addPost();
+    expect(ctrl.posts.length).toEqual(0);
   });
 
   it('can increase the upvotes', function() {

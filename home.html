@@ -3,7 +3,7 @@
 </div>
 
 <div ng-repeat="post in main.posts | orderBy: '-upvotes'">
-  <span class="glyphicon glyphicon-thumbs-up"
+  <span id='{{$index}}' class="glyphicon glyphicon-thumbs-up"
     ng-click="main.incrementUpvotes(post)"></span>
   {{post.upvotes}}
   <span class="link">
@@ -33,5 +33,5 @@
       ng-model="main.link">
   </div>
 
-  <button type="submit" class="btn btn-primary">Post</button>
+  <button id='submit' type="submit" class="btn btn-primary">Post</button>
 </form>
