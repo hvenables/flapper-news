@@ -1,4 +1,4 @@
-app.controller('MainCtrl', ['$scope', 'posts', function($scope, posts) {
+flapperNews.controller('MainCtrl', ['$scope', 'posts', function($scope, posts) {
   var self = this;
 
   self.posts = posts.posts;
@@ -8,7 +8,8 @@ app.controller('MainCtrl', ['$scope', 'posts', function($scope, posts) {
     self.posts.push({
       title: self.title,
       link: self.link,
-      upvotes: 0
+      upvotes: 0,
+      comments: []
     });
     self.title = '';
     self.link = '';

@@ -1,4 +1,4 @@
-app.factory('posts', [function() {
+flapperNews.factory('posts', [function() {
   var o = {
     posts: []
   };
