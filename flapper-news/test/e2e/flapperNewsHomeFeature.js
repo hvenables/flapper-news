@@ -9,7 +9,7 @@ describe('flappernews', function() {
   var commentSubmit = element(by.id('commentSubmit'));
 
   beforeEach(function() {
-    browser.get('http://localhost:8080');
+    browser.get('http://localhost:3000');
   });
 
   it('has a title', function() {
