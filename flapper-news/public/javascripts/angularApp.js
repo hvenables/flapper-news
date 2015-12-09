@@ -11,6 +11,11 @@ function($stateProvider, $urlRouterProvider) {
       templateUrl: './partials/home.html',
       controller: 'MainCtrl',
       controllerAs: 'main',
+      resolve: {
+        postPromise: ['posts', function(posts){
+          return posts.getAll();
+        }]
+      }
     })
 
     .state('posts', {

@@ -5,17 +5,15 @@ flapperNews.controller('MainCtrl', ['$scope', 'posts', function($scope, posts) {
 
   self.addPost = function() {
     if(!self.title || self.title === '') { return; }
-    self.posts.push({
+    posts.create({
       title: self.title,
       link: self.link,
-      upvotes: 0,
-      comments: []
     });
     self.title = '';
     self.link = '';
   };
 
   self.incrementUpvotes = function(post) {
-    post.upvotes += 1;
+    posts.upvote(post);
   };
 }]);
